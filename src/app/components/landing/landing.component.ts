@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  haveSearchedOnce : boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+
+    this.haveSearchedOnce = false;
   }
 
 }

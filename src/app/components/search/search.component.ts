@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  haveSearchedOnce : boolean = false;
-
   constructor() { }
 
   ngOnInit() {
-    this.haveSearchedOnce = false;
   }
 
 }
