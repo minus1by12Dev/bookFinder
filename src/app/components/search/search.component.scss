@@ -1,0 +1,32 @@
+.searchjumbo {
+
+    background-color: #F7F2FF;
+    height: 75vh;
+    
+    display: flex;
+    align-items: flex-start;
+
+    margin-bottom: 0rem;
+
+    h6 {
+        margin-top: -1rem;
+        color: #999;
+        font-size: .88rem;
+    }
+
+    .input-group {
+        height: 60px;
+    }
+
+    .searchInput {
+
+        height: 60px;
+
+        &:focus, &:active {
+            outline: none;
+            //border-color: transparent;
+
+            box-shadow: none;
+        }
+    }
+}

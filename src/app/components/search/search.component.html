@@ -1,0 +1,29 @@
+<div class="jumbotron searchjumbo">
+    <div class="container">
+        <h1><small>Welcome to</small> Book Finder</h1>
+        <h6>Lost book be found again!!!</h6>
+        <div class="input-group input-group-lg mb-3 mt-4">
+            <div class="input-group-prepend">
+                <div ngbDropdown class="d-inline-block">
+                    <button class="btn btn-outline-secondary h-100" id="dropdownBasic1" ngbDropdownToggle>Search By</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem>Title</button>
+                        <button ngbDropdownItem>Author</button>
+                        <div class="dropdown-divider"></div>
+                        <button ngbDropdownItem>Subject</button>
+                    </div>
+                </div>
+            </div>
+            <input type="text" class="form-control searchInput" aria-label="Text input with dropdown button">
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" id="searchBtn">Find me a book</button>
+            </div>
+        </div>
+        <p class="lead">Powered by <a href="https://openlibrary.org" target="_blank">Open Library</a>.</p>
+        <hr class="my-4">
+        <ul>
+            <li>Search for a <b>Book</b> by Title, Author or by a Subject</li>
+            <li>Recommend it to your friends, favourite it for <i>book</i>keeping.</li>
+        </ul>
+    </div>
+</div>
