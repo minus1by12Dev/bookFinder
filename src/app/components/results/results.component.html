@@ -1,7 +1,9 @@
 <section class="resultsArea">
-    <h3>Results <small class="text-muted">( Showing {{paginationData.offset * 20 + 1}} to {{paginationData.offset * 20 + 20}} Of {{paginationData.bookCount}} )</small></h3>
+    <h3 *ngIf="paginationData.bookCount > 0">Results <small class="text-muted">( Showing {{paginationData.offset * 20 + 1}} to {{paginationData.offset * 20 + 20}} Of {{paginationData.bookCount}} )</small></h3>
     <hr/>
-    <section class="bookResults card-deck row ml-0 mr-0">
+    <section class="bookResults card-deck row ml-0 mr-0" *ngIf="paginationData.bookCount > 0">
         <bf-book *ngFor="let book of books" [book]=book></bf-book>
     </section>
+
+    <h3 *ngIf="paginationData.bookCount == 0" class="alert alert-warning">No Results Found. Please check the provided input & try again.</h3>
 </section>

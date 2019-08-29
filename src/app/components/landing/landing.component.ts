@@ -9,7 +9,7 @@ import { Book } from 'src/app/models/book';
 })
 export class LandingComponent implements OnInit {
 
-  goThin : boolean = false;
+  goThin : string = 'false';
   haveSearchedOnce : boolean = false;
 
   books : Array<Book> = [];
@@ -25,6 +25,7 @@ export class LandingComponent implements OnInit {
   }
 
   requestForSearch(searchData : any) {
+
     console.log(searchData);
 
     if(searchData.selectedType === 'subject') {
@@ -47,10 +48,8 @@ export class LandingComponent implements OnInit {
     this.paginationData.bookCount = bookData.numFound;
     this.paginationData.offset = bookData.start;
 
-    if(this.books.length > 0) {
-      this.haveSearchedOnce = true;
-      this.goThin = true;
-    }
+    this.haveSearchedOnce = true;
+    this.goThin = 'true';
   }
 
 }

@@ -9,7 +9,7 @@ import { Book } from 'src/app/models/book';
 export class ResultsComponent implements OnInit {
 
   @Input() books : Array<Book> = [];
-  @Input() paginationData : {} = [];
+  @Input() paginationData : any = {};
 
   constructor() { }
 
