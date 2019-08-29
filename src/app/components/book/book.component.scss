@@ -1,0 +1,43 @@
+.bookCard {
+
+    max-width: 300px;
+    min-width: 300px;
+    background-color: #fefefe;
+
+    margin-bottom: 2rem;
+    border: .1rem solid #ddd;
+
+    .bookCover {
+
+        margin: 8px auto;
+        padding: 4px;
+
+        img {
+            width: 90%;
+            display: block;
+            margin: auto;
+        }
+
+    }
+
+    .card-body {
+        font-size: .92rem;
+        padding: 0rem 1rem;
+
+        .card-title {
+            margin-bottom: .25rem;
+        }
+
+        ul {
+
+            padding-left: 1rem;
+            font-size: .84rem;
+            li {
+
+                .value {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

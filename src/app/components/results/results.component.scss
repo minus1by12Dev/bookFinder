@@ -1,0 +1,14 @@
+.resultsArea {
+
+    background: #F8F8F8;
+    padding: 2rem;
+}
+
+.bookResults {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+}

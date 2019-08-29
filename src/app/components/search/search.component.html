@@ -1,22 +1,24 @@
-<div class="jumbotron searchjumbo">
+<div class="jumbotron searchjumbo" [ngClass] = "{'goThinner' : goThin == true}">
     <div class="container">
         <h1><small>Welcome to</small> Book Finder</h1>
         <h6>Lost book be found again!!!</h6>
         <div class="input-group input-group-lg mb-3 mt-4">
             <div class="input-group-prepend">
                 <div ngbDropdown class="d-inline-block">
-                    <button class="btn btn-outline-secondary h-100" id="dropdownBasic1" ngbDropdownToggle>Search By</button>
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                        <button ngbDropdownItem>Title</button>
-                        <button ngbDropdownItem>Author</button>
+                    <button class="btn btn-outline-secondary h-100 selectTypeBtn" id="dropdownSearchby" 
+                        [ngClass] = "{'shake-horizontal' : selectionError}"
+                        ngbDropdownToggle>{{selectedType}}</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownSearchby">
+                        <button ngbDropdownItem (click)="selectForSearch('title')">Title</button>
+                        <button ngbDropdownItem (click)="selectForSearch('author')">Author</button>
                         <div class="dropdown-divider"></div>
-                        <button ngbDropdownItem>Subject</button>
+                        <button ngbDropdownItem (click)="selectForSearch('subject')">Subject</button>
                     </div>
                 </div>
             </div>
-            <input type="text" class="form-control searchInput" aria-label="Text input with dropdown button">
+            <input type="text" class="form-control searchInput" aria-label="Text input with dropdown button" #searchText (keyup.enter)="findTheBook(searchText.value)">
             <div class="input-group-append">
-                <button class="btn btn-outline-primary" id="searchBtn">Find me a book</button>
+                <button class="btn btn-outline-primary" id="searchBtn" (click)="findTheBook(searchText.value)">Find me a book</button>
             </div>
         </div>
         <p class="lead">Powered by <a href="https://openlibrary.org" target="_blank">Open Library</a>.</p>

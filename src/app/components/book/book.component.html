@@ -1,1 +1,14 @@
-<p>book works!</p>
+<div class="card bookCard">
+    <div class="bookCover">
+        <img [attr.src]="book.cover_edition_key ? 'http://covers.openlibrary.org/b/olid/' + book.cover_edition_key + '-M.jpg' : 'assets/na.jpg'" class="card-img-top img-thumbnail" [attr.alt]="'Cover image for ' + book.title">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{book.title}}</h5>
+      <p class="card-text">by {{book.author_name}}</p>
+      <ul>
+          <li>First Publish year : <span class="value">{{book.first_publish_year}}</span></li>
+          <li><span class="value">{{book.edition_count}}</span> Edition<span *ngIf="book.edition_count > 1">s</span></li>
+          <li>Type : <span class="value">{{book.type}}</span></li>
+      </ul>
+    </div>
+</div>

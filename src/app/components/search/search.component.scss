@@ -8,6 +8,12 @@
 
     margin-bottom: 0rem;
 
+    &.goThinner  {
+
+        height: 100%;
+        padding: 2rem;
+    }
+
     h6 {
         margin-top: -1rem;
         color: #999;
@@ -28,5 +34,13 @@
 
             box-shadow: none;
         }
+    }
+
+    .selectTypeBtn {
+        text-transform: capitalize;
+        min-width: 200px;
+
+        font-size: 24px;
+        font-weight: 500;
     }
 }

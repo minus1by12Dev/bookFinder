@@ -20,6 +20,9 @@ import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './components/landing/landing.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 import {NgbPaginationModule, NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -39,6 +42,8 @@ import {NgbPaginationModule, NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+	  ToastrModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     NgbPaginationModule, 
